@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160b18">
+  <title>For Rody ♡ 29.09.2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="particles" class="particles"></div>
+
+  <audio id="birthdaySong" loop preload="auto">
+    <source src="assets/caflt-el-la3ba.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicToggle" class="music-toggle" aria-label="Music">
+    <span class="disc">♪</span>
+    <span id="musicText">Play</span>
+  </button>
+
+  <main>
+    <!-- 1 -->
+    <section class="screen active" id="home">
+      <div class="floating-symbols" aria-hidden="true">
+        <span>♡</span><span>✦</span><span>♛</span><span>♢</span><span>✧</span><span>♡</span>
+      </div>
+      <div class="hero-card glass">
+        <p class="mini-label">A little birthday game</p>
+        <h1>Hey, <span>Rody</span> ♡</h1>
+        <p class="hero-sub">Someone special has a little surprise waiting...</p>
+        <div class="date-pill">29 · 09 · 2026</div>
+        <button class="main-btn next" data-next="question">Enter the game <span>→</span></button>
+        <p class="tiny-note">tap once and let the music begin ♪</p>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="screen" id="question">
+      <div class="game-card glass">
+        <div class="badge">ROUND 01</div>
+        <div class="big-icon">♛</div>
+        <h2>Whose birthday is it?</h2>
+        <p>Choose carefully... there is only one right answer.</p>
+        <div class="choices">
+          <button class="choice wrong">Someone else 😌</button>
+          <button class="choice right" data-next="countdown">Rody ♡</button>
+        </div>
+        <div id="wrongMsg" class="wrong-msg">Nope! Try again 😏</div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="screen" id="countdown">
+      <div class="countdown-card glass">
+        <p class="mini-label">THE BIG DAY IS COMING</p>
+        <h2>Ready for <span>29/09?</span></h2>
+        <p class="subtle">The clock is counting down to your day ✨</p>
+        <div class="timer" id="timer">
+          <div class="time-box"><strong id="days">00</strong><small>days</small></div>
+          <div class="colon">:</div>
+          <div class="time-box"><strong id="hours">00</strong><small>hours</small></div>
+          <div class="colon">:</div>
+          <div class="time-box"><strong id="minutes">00</strong><small>minutes</small></div>
+          <div class="colon">:</div>
+          <div class="time-box"><strong id="seconds">00</strong><small>seconds</small></div>
+        </div>
+        <div class="timer-decoration">♢ ✦ ♡ ✦ ♢</div>
+        <button class="main-btn next" data-next="cake">Keep going <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="screen" id="cake">
+      <div class="cake-card glass">
+        <div class="badge">ROUND 02 · MAKE A WISH</div>
+        <h2>One little wish for Rody 🎂</h2>
+        <p>Tap the candles and make your wish.</p>
+        <div class="cake-scene">
+          <div class="glow"></div>
+          <div class="candles">
+            <button class="candle" aria-label="candle 1"><i></i></button>
+            <button class="candle" aria-label="candle 2"><i></i></button>
+            <button class="candle" aria-label="candle 3"><i></i></button>
+          </div>
+          <div class="cake">
+            <div class="cream"></div>
+            <div class="cake-top">♡</div>
+            <div class="cake-body"></div>
+            <div class="plate"></div>
+          </div>
+        </div>
+        <p id="wishHint" class="wish-hint">Three taps... then the magic starts ✨</p>
+        <button id="cakeNext" class="main-btn hidden next" data-next="memory">Open the next surprise
+          <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="screen" id="memory">
+      <div class="memory-card glass">
+        <div class="badge">A LITTLE WALL OF LOVE</div>
+        <h2>Moments for <span>Rody</span> ♡</h2>
+        <p class="subtle">Replace these three cards with your favorite photos.</p>
+        <div class="memory-grid">
+          <div class="memory-photo">
+            <div class="photo-placeholder">♡<small>your photo</small></div><span>little moments</span>
+          </div>
+          <div class="memory-photo featured">
+            <div class="photo-placeholder">✦<small>your photo</small></div><span>favorite memory</span>
+          </div>
+          <div class="memory-photo">
+            <div class="photo-placeholder">♢<small>your photo</small></div><span>another smile</span>
+          </div>
+        </div>
+        <button class="main-btn next" data-next="message">There is more... <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="screen" id="message">
+      <div class="message-card glass">
+        <div class="heart-ring">♡</div>
+        <p class="mini-label">JUST FOR YOU</p>
+        <h2 id="typeTitle"></h2>
+        <p id="typedMessage"></p>
+        <div class="signature">— with lots of love ♡</div>
+        <button class="main-btn next" data-next="final">One last thing <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="screen" id="final">
+      <div class="final-card glass">
+        <div class="crown">♛</div>
+        <div class="confetti-word">HAPPY BIRTHDAY</div>
+        <h1>Rody <span>♡</span></h1>
+        <p class="final-text">29 · 09 · 2026</p>
+        <div class="final-symbols">♢ ✦ ♡ ✧ ♛ ✧ ♡ ✦ ♢</div>
+        <p class="question-final">Now choose your birthday mood:</p>
+        <div class="mood-buttons">
+          <button data-mood="✨ More magic">✨ More magic</button>
+          <button data-mood="🎀 More cake">🎀 More cake</button>
+          <button data-mood="💗 Everything">💗 Everything</button>
+        </div>
+        <p id="moodResult" class="mood-result"></p>
+        <button id="replay" class="replay">↻ Play it again</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
