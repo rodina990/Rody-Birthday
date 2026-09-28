@@ -122,6 +122,9 @@
           </div>
 
         </div>
+        <button class="main-btn next" data-next="message">
+          There is more... <span>→</span>
+        </button>
       </div>
     </section>
 
@@ -138,26 +141,46 @@
     </section>
 
     <!-- 7 -->
-    <section class="screen" id="final">
-      <div class="final-card glass">
-        <div class="crown">♛</div>
-        <div class="confetti-word">HAPPY BIRTHDAY</div>
-        <h1>Rody <span>♡</span></h1>
-        <p class="final-text">29 · 09 · 2026</p>
-        <div class="final-symbols">♢ ✦ ♡ ✧ ♛ ✧ ♡ ✦ ♢</div>
-        <p class="question-final">Now choose your birthday mood:</p>
-        <div class="mood-buttons">
-          <button data-mood="✨ More magic">✨ More magic</button>
-          <button data-mood="🎀 More cake">🎀 More cake</button>
-          <button data-mood="💗 Everything">💗 Everything</button>
+   <section class="screen" id="final">
+      <div class="glass final-card">
+
+        <div class="confetti-word">
+          ✦ ♡ ✦ HAPPY DAY ✦ ♡ ✦
         </div>
-        <p id="moodResult" class="mood-result"></p>
-        <button id="replay" class="replay">↻ Play it again</button>
+
+        <div class="crown">♕</div>
+
+        <h1>
+          HAPPY<br>
+          <span>BIRTHDAY</span>
+        </h1>
+
+        <p class="final-text">
+          Rody ♡
+        </p>
+
+        <div class="final-symbols">
+          ♡ ✦ ♡ ✦ ♡
+        </div>
+
+        <p class="question-final">
+          How are you feeling today? ✨
+        </p>
+
+        <div class="mood-buttons">
+          <button onclick="setMood('happy')">♡ Happy</button>
+          <button onclick="setMood('loved')">♡ Loved</button>
+          <button onclick="setMood('special')">✦ Special</button>
+        </div>
+
+        <div class="mood-result" id="moodResult"></div>
+
+        <button class="main-btn replay" onclick="location.reload()">
+          Play it again ↻
+        </button>
+
       </div>
     </section>
-  </main>
-
-  <div id="toast" class="toast"></div>
   <script src="script.js"></script>
 </body>
 
